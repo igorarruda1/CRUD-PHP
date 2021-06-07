@@ -9,15 +9,13 @@
 <body>
         <h1>CRUD - PHP</h1>
 
-
-    <label for="fname">Nome: </label>
-    <input type="text" placeholder="Digite seu nome"></input><br><br>
+    <form action="login.php" method="POST">
+    <label for="fname">E-mail: </label>
+    <input type="text" placeholder="Digite E-mail" name="mail"></input><br><br>
     <label for="fpass">Senha: </label>
-    <input type="password"  placeholder="Digite sua senha"></input> <br><br>
-
-    <a href="cadastrar.php">CADASTRO</a>
+    <input type="password"  placeholder="Digite sua senha" name="pass"></input> <br><br>
     <button type="submit" value="submit">LOGIN</button>
-
-    
+    </form>
+    <a href="cadastrar.php">CADASTRO</a>
 </body>
 </html>
