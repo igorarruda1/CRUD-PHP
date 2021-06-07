@@ -8,6 +8,8 @@
 </head>
 <body>
         <h1>CRUD - PHP</h1>
+
+
     <label for="fname">Nome: </label>
     <input type="text" placeholder="Digite seu nome"></input><br><br>
     <label for="fpass">Senha: </label>

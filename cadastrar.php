@@ -8,14 +8,16 @@
 </head>
 <body>
         <h1>Tela de Cadastramento</h1>
-    <label for="fname">Nome: </label>
-    <input type="text" placeholder="Digite seu nome"></input><br><br>
-    <label for="fpass">Senha: </label>
-    <input type="password"  placeholder="Digite sua senha"></input> <br><br>
-    <label for="Fmail">E-mail: </label>
-    <input type="email"  placeholder="Digite seu E-mail"></input> <br><br>
 
+        <form action="validacaoCadastro.php" method="post">
+    <label for="fname">Nome: </label>
+    <input type="text" placeholder="Digite seu nome" name="name"></input><br><br>
+    <label for="fpass">Senha: </label>
+    <input type="password"  placeholder="Digite sua senha" name="pass"></input> <br><br>
+    <label for="Fmail">E-mail: </label>
+    <input type="email"  placeholder="Digite seu E-mail" name="mail"></input> <br><br>
     <button type="submit">CADASTRAR</button>
+    </form>
     <a href="index.php">VOLTAR</a>
 </body>
 </html>
