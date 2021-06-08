@@ -15,19 +15,26 @@ if (!$conn) {
 $_mail = $_POST["mail"];
 $_pass = $_POST["pass"];
 
- $sqllogin = "SELECT * FROM  user WHERE ('$_mail' = user_mail and '$_pass' = user_pass)";
+  // Selecionar apenas o usuario do email
+ $sql = "SELECT * FROM user WHERE ('$_mail' = user_mail and '$_pass' = user_pass)";
+ $result = $conn->query($sql);
+
+ if($result-> num_rows > 0) {
+   // saida de cada linha da tabela
+    while($linha = $result-> fetch_assoc()){
+      echo 'ID: ' , $linha['id_user'],'<BR>';
+      echo 'NOME: ', $linha['user_name'],'<br>';
+      echo 'EMAIL: ', $linha['user_mail'],'<br>';
+    }
+
+  
+
+ }else{
+  echo  '<script>alert("Email ou senha incorreta!");</script>';
+    
+ }
 
 
-if (mysqli_query($conn, $sqllogin)) {
-
-  echo $sqllogin;
-
-
-
-
-} else {
-  echo "Error: " . $sqllogin . "<br>" . mysqli_error($conn);
-}
 
 mysqli_close($conn);
 ?>
