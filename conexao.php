@@ -1,18 +1,20 @@
 <?php
 
+session_start();
+
 $host =  "localhost";
 $user = "root";
 $pass = "";
 $bd = "crud-php";
 
-// conexao com o bando de dados 
-$mysqli = new mysqli($host, $user, $pass, $bd);
+global $conn;
 
-if($mysqli -> connect_errno)
-    echo "Falha na conexão: ( " .$mysqli-> connect_errno . ") " . $mysqli->connect_error;
+try{
+    $conn = new PDO("mysql:dbname=".$bd."; host=".$host,$user,$pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
-
-    // Create connection
-$conn = mysqli_connect($host, $user, $pass, $bd);
+}catch(PDOException $e){
+    echo "ERRO: " .$e->getMessage();
+    exit;
+}
 ?> 
