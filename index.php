@@ -1,5 +1,5 @@
 <?php 
- require 'conexao.php';
+ require 'verifica.php';
 
  if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
  
@@ -18,7 +18,8 @@
 
 
 
-BEM VINDO
+BEM VINDO <?php echo $nomeuser ?>
+
 
 <a href="logout.php">SAIR</a>
 </body>
