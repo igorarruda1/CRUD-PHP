@@ -5,33 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="login.css" rel="stylesheet">
     <title>Tela 1</title>
-
+   
 </head>
 <body>
         <div class="container">
-        <h1>CRUD - PHP</h1>
-
-    <form action="logar.php" method="POST">
-    <div class="col-md-3 form-group">
-        <label for="fname" class="form-label">E-mail: </label>
-        <input type="text" class="form-control"  name="mail" placeholder="name@example.com">
-    </div>
-    <div class="col-md-3 form-group">
-        <label for="fpass" class="form-label">Senha: </label>
-        <input type="password" class="form-control" name="pass"  placeholder="Digite sua senha">
-    </div>
-
-    <button type="submit"  class="btn btn-primary">LOGIN</button>
-
-
-    <a href="cadastrar.php">CADASTRO</a>
-    </form>
-    
-    </div>
-
-    
-
+            <div class="row">
+                <div class="card card-container">
+                    <div class="col">
+                        <p class="profile">CLUD-PHP</p>
+                        <form class="form-signin" action="logar.php" method="POST">
+                            <input type="email" id="mail" name="mail" class="form-control" placeholder="E-mail" required autofocus>
+                            <input type="password" id="pass" name="pass" class="form-control" placeholder="Senha" required>
+                            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar</button>
+                            <a class="btn-a btn-signin"  href="cadastrar.php">Cadastrar-se </a>
+                        </form><!-- /form -->
+                    </div>
+                </div> <!-- Fim card-container -->
+            </div>
+        </div><!-- Fim do container -->
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
